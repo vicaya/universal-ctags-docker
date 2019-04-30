@@ -11,7 +11,7 @@ RUN \
   ./configure && make && make install
 
 FROM alpine:3.9
-LABEL maintainer="Universal Ctags <uctags@vicaya.com>" license="MIT"
+LABEL maintainer="vicaya <ctags@vicaya.com>" license="MIT"
 
 # install run-time dependencies
 RUN apk --update --no-cache add jansson yaml libxml2
