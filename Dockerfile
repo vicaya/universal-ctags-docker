@@ -16,6 +16,7 @@ LABEL maintainer="vicaya <ctags@vicaya.com>" license="MIT"
 # install run-time dependencies
 RUN apk --update --no-cache add jansson yaml libxml2
 COPY --from=builder /usr/local/bin/ctags /usr/local/bin/
+RUN /usr/local/bin/ctags --version
 
 WORKDIR /workspace
 ENTRYPOINT ["ctags"]
